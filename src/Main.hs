@@ -29,7 +29,7 @@ firstUsefulDir path = (path </>) . head . filterUseless
 moveDirs :: FilePath -> FilePath -> IO ()
 moveDirs old new = do
   current <- getCurrentDirectory
-  let newSrc  = current </> "src" </> new
+  let newSrc  = current </> "src"  </> new
       newTest = current </> "test" </> new
       oldTest = current </> "test" </> old
   createDirectory newSrc
